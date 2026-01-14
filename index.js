@@ -32,12 +32,18 @@ const productRouter =require('./routes/products-route')
 const userRouter = require('./routes/user-route')
 const dashRouter = require('./routes/dash-route')
 const aiRouter = require('./routes/ai-route')
+const cartRouter = require('./routes/cart-route')
+const orderRouter = require('./routes/order-route')
+const wishlistRouter = require('./routes/wishlist-route')
 
 
 app.use('/api/products',productRouter)
 app.use('/api/user',userRouter)
 app.use('/api/dashboard',dashRouter)
 app.use('/api/ai',aiRouter)
+app.use('/api/cart',cartRouter)
+app.use('/api/order',orderRouter)
+app.use('/api/wishlist',wishlistRouter)
 
 
 app.use((error,req,res,next)=>{
